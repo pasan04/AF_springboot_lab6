@@ -1,5 +1,8 @@
 package com.example.demo.controller;
 
+import java.util.List;
+
+import org.springframework.http.HttpEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +23,14 @@ public class MessageController {
 	}
 	
 	@RequestMapping (value = "/{id}",method=RequestMethod.GET)
-	public Message getMessage(@PathVariable("id") String id) {
+	public HttpEntity<Message> getMessage(@PathVariable("id") String id) {
+		
+		return null;
+		
+	}
+	
+	@RequestMapping (method=RequestMethod.GET)
+	public List <Message> getAllMessage() {
 		
 		return null;
 		
